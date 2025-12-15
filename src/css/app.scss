@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0;
+  line-height: 24px;
+}
+p {
+  margin-bottom: 12px;
+  span {
+    font-weight: 600;
+  }
+}
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 12px;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.hotel-card {
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+}
+.hotel-card__thumb img {
+  height: 100%;
+  object-fit: cover;
+}
+.hotel-card__body {
+  padding: 20px 16px;
+}
+.hotel-card__stars {
+  padding: 8px 20px;
+  border: 1px solid $primary;
+  background: white;
+  border-radius: 40px;
+  width: fit-content;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.hotel-card__footer {
+  padding: 20px 15px;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.q-drawer {
+  border-left: 1px solid #f0f0f0;
+  .bg-main-info {
+    background: #f6f6f6;
+  }
+}
+.drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #009efb;
+  color: white;
+}
+.q-drawer__info {
+  padding: 0 16px 20px 16px;
+}
+.q-carousel__control .q-btn {
+  background: white;
+  color: $primary;
+}
+.q-footer {
+  background: #f6f6f6;
+}
+@media (max-width: 767px) {
+  .q-drawer {
+    max-width: 100%;
+  }
+}

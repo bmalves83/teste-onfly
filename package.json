@@ -1,0 +1,53 @@
+{
+  "name": "onfly",
+  "version": "0.0.1",
+  "description": "Um teste para analisar o nível técnico",
+  "productName": "Onfly Teste Bruno Alves",
+  "author": "Bruno Moreira Alves",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "dev": "quasar dev",
+    "mock": "json-server --watch payload.json --port 3001",
+    "build": "quasar build",
+    "postinstall": "quasar prepare"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "axios": "^1.2.1",
+    "pinia": "^3.0.1",
+    "quasar": "^2.16.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@quasar/app-vite": "^2.1.0",
+    "@types/node": "^20.5.9",
+    "@vitest/ui": "^4.0.15",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-typescript": "^14.4.0",
+    "@vue/test-utils": "^2.4.3",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.4.0",
+    "jsdom": "^23.0.1",
+    "json-server": "^1.0.0-beta.3",
+    "prettier": "^3.3.3",
+    "typescript": "^5.9.2",
+    "vite-plugin-checker": "^0.11.0",
+    "vitest": "^4.0.15",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.0.7"
+  },
+  "engines": {
+    "node": "^28 || ^26 || ^24 || ^22 || ^20",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
