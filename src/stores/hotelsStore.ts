@@ -3,6 +3,24 @@ import { ref, computed } from 'vue';
 import { api } from '../utils/api';
 import type { Hotel, City } from '../types/hotel';
 
+interface RawHotel {
+  id: number;
+  name: string;
+  stars: string;
+  totalPrice: number;
+  dailyPrice: number;
+  tax: number;
+  thumb: string;
+  images?: string[];
+  amenities: (string | { key: string; label?: string })[];
+  hasBreakFast: boolean;
+  hasRefundableRoom: boolean;
+  district: string;
+  placeId: number;
+  description?: string;
+  fullAddress?: string;
+}
+
 export const useHotel = defineStore('hotels', () => {
   const list = ref<Hotel[]>([]);
   const cities = ref<City[]>([]);
@@ -46,7 +64,12 @@ export const useHotel = defineStore('hotels', () => {
   const fetchHotels = async () => {
     loading.value = true;
     const { data } = await api.get('/hotels');
-    list.value = data;
+    list.value = data.map((hotel: RawHotel) => ({
+      ...hotel,
+      amenities: hotel.amenities.map((amenity) =>
+        typeof amenity === 'string' ? { key: amenity } : amenity,
+      ),
+    }));
     loading.value = false;
   };
 

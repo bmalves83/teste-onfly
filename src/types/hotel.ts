@@ -7,7 +7,7 @@ export type Hotel = {
   tax: number;
   thumb: string;
   images?: string[];
-  amenities: { key: string; label: string }[];
+  amenities: { key: string; label?: string }[];
   hasBreakFast: boolean;
   hasRefundableRoom: boolean;
   district: string;

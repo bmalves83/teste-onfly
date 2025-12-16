@@ -12,16 +12,26 @@ npm install
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
+### Ambiente de desenvolvimento
+
+### Iniciar o json-server
+
 ```bash
-quasar dev
+npm run mock
 ```
 
-### Format the files
+### Iniciar o ambiente em desenvolvimento
 
 ```bash
-yarn format
-# or
-npm run format
+npm run dev
+```
+
+### Teste
+
+```bash
+npm run test
+# ou visual
+npm run test:ui
 ```
 
 ### Build the app for production
