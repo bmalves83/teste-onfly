@@ -2,7 +2,7 @@
 
 Um teste para analisar o nível técnico
 
-## Install the dependencies
+## Instalação das dependências
 
 ```bash
 yarn
@@ -10,23 +10,21 @@ yarn
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Iniciar o app em ambiente de desenvolvimento
 
-### Ambiente de desenvolvimento
-
-### Iniciar o json-server
+## Iniciar o json-server
 
 ```bash
 npm run mock
 ```
 
-### Iniciar o ambiente em desenvolvimento
+## Iniciar o ambiente em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-### Teste
+## Teste
 
 ```bash
 npm run test
@@ -34,10 +32,10 @@ npm run test
 npm run test:ui
 ```
 
-### Build the app for production
+### Build para produção
 
 ```bash
-quasar build
+npm run build
 ```
 
 ### Customize the configuration
